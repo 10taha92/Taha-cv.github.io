@@ -131,7 +131,9 @@
             <h5>ABOUT</h5>
           </div>
           <div class="col-lg-6">
-            <p>I am a Senior Software Engineer with experience in MERN Full stack, Data Engineering, BI Reporting, and ETL development. I have worked on building data integration solutions, optimized PL/SQL for performance, and developed interactive dashboards in Power BI. Skilled in React, Node.js, SQL, and cloud-based data pipelines, I enjoy solving complex problems through clean code and efficient design. I also pursue competitive programming, where I’ve solved 1000+ problems and earned strong rankings across CodeChef, GFG, and HackWithInfy.</p>
+            <p>I am a Senior Software Engineer with experience in MERN Full stack, Data Engineering, BI Reporting, and ETL development. I have Worked upon Multiple End to end Full stack projects, Created UI screens for different use casses with modern technologies and also,
+               worked on building data integration solutions, optimized PL/SQL for performance, and developed interactive dashboards in Power BI. Skilled in React, Node.js, SQL, and cloud-based data pipelines, I enjoy solving complex problems through clean code and efficient design. I also pursue competitive programming, where I’ve solved 1000+ problems and earned strong rankings across CodeChef, GFG, and HackWithInfy.
+              Open for new challenges and opportunities in software development and engineering.</p>
           </div>
           <div class="col-lg-3">
             <p><a href="#"><i class="icon-file"></i></a>
@@ -544,7 +546,6 @@
           <h5>SKILLS</h5>
         </div>
 
-
         <div class="col-lg-3">
           <canvas id="cc" height="130" width="130"></canvas>
           <p>C/C++ programming</p>
@@ -867,7 +868,7 @@
                 <label for="contact-name">Your Name</label>
                 <input type="name" name="name" class="form-control" id="contact-name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
                 <div class="validate"></div>
-              </div>
+              </div> 
               <div class="form-group">
                 <label for="contact-email">Your Email</label>
                 <input type="email" name="email" class="form-control" id="contact-email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
@@ -929,12 +930,46 @@
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/php-mail-form/validate.js"></script>
+  <!-- <script src="lib/php-mail-form/validate.js"></script> -->
   <script src="lib/chart/chart.js"></script>
   <script src="lib/easing/easing.min.js"></script>
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+
+  <script>
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // Get values
+    const name = document.getElementById("contact-name").value;
+    const email = document.getElementById("contact-email").value;
+    const subject = document.getElementById("contact-subject").value;
+    const message = document.getElementById("contact-message").value;
+
+    // Basic validation
+    if (!name || !email || !subject || !message) {
+        alert("Please fill all fields.");
+        return;
+    }
+
+    // Construct mail body
+    const mailSubject = encodeURIComponent(subject);
+    const mailBody = encodeURIComponent(
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n\n" +
+        "Message:\n" + message
+    );
+
+    // Open default email client
+    window.location.href =
+        "mailto:taha11092@outlook.com?subject=" +
+        mailSubject +
+        "&body=" +
+        mailBody;
+});
+</script>
+
 
 </body>
 </html>
