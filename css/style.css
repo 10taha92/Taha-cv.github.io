@@ -216,7 +216,12 @@ SECTION WRAPS
   color: white;
 }
 
-#skillswrap h5, p {
+/* #skillswrap h5, p {
+  color: white;
+} */
+
+#skillswrap h5,
+#skillswrap p {
   color: white;
 }
 
@@ -392,4 +397,16 @@ sm {
   padding: 15px;
   font-weight: 600;
   margin: 15px 0;
+}
+
+#skillswrap .skill-item {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#skillswrap canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px;
 }
